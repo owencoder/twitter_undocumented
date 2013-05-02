@@ -31,9 +31,11 @@
 	http://cdn.syndication.twimg.com/widgets/timelines/324713397071527936
 	
 	指定スクリーンネームがとられているかどうかをチェックする(認証不要。RateLimited有り)
+	by フォロワーさん
 	https://api.twitter.com/i/users/username_available.json?username=[screen_name]
 	
 	メールアドレスが使えるかどうか。未確認(認証不要。RateLimited有り)
+	by フォロワーさん
 	https://api.twitter.com/i/users/email_available.json
 	
 	//	こっから認証必要
