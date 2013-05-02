@@ -30,6 +30,12 @@
 	ガジェットIDからタイムラインを取得できる。ただ整形処理が必要でめんどくせー
 	http://cdn.syndication.twimg.com/widgets/timelines/324713397071527936
 	
+	指定スクリーンネームがとられているかどうかをチェックする(認証不要。RateLimited有り)
+	https://api.twitter.com/i/users/username_available.json?username=[screen_name]
+	
+	メールアドレスが使えるかどうか。未確認(認証不要。RateLimited有り)
+	https://api.twitter.com/i/users/email_available.json
+	
 	//	こっから認証必要
 	Status Activity ( ふぁぼ、RTの詳細を得られる )
 	https://api.twitter.com/i/statuses/[tweet_id]/activity/summary.json
