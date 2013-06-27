@@ -8,21 +8,21 @@
 	
 	
 	//	cdn.api.twitter.com系は、埋め込みツイートから拾ってきてるので、実質規制無いようなものです。
-	UserID -> ScreenName ( 認証不要 ) by れにうむ氏
+	UserID -> ScreenName ( 認証不要 ) by 某凍結氏
 	https://twitter.com/users/[user_id].json
 	
 	ツイート取得 ( 認証不要 )
 	https://cdn.api.twitter.com/1/statuses/show.json?id=[user_id]&include_entities=true
 	
 	aとbの関係。単にフォローしてるかどうかのチェックならば、下のAPI使ったほうが楽。 ( 認証不要 )
-	by れにうむ氏
+	by 某凍結氏
 	https://twitter.com/friendships/show?format=json&target_id=[user_id]&source_id=[user_id]
 	
 	aがbをフォローしてるかどうかどうか ( 認証不要 )
 	https://cdn.api.twitter.com/1/friendships/exists.json?screen_name_a=[user_a]&screen_name_b=[user_b]
 	
 	ユーザー情報の取得 ( 認証不要 )
-	https://cdn.api.twitter.com/1/users/show.json?screen_name=[name]
+	https://cdn.api.twitter.com/1/users/show.json?screen_name=[screen_name]
 	
 	ユーザー情報の取得の一括 ( 一度に100人まで )( 認証不要 )
 	https://cdn.api.twitter.com/1/users/lookup.json?user_id=[user_id, user_id...]
@@ -34,9 +34,9 @@
 	by フォロワーさん
 	https://api.twitter.com/i/users/username_available.json?username=[screen_name]
 	
-	メールアドレスが使えるかどうか。未確認(認証不要。RateLimited有り)
+	メールアドレスが使えるかどうか(認証不要。RateLimited有り)
 	by フォロワーさん
-	https://api.twitter.com/i/users/email_available.json
+	https://api.twitter.com/i/users/email_available.json?mail=[mail_address]
 	
 	//	こっから認証必要
 	Status Activity ( ふぁぼ、RTの詳細を得られる )
@@ -54,18 +54,18 @@
 	http://api.twitter.com/users/following_followers_of.json
 	
 	以下、公式クライアントのキーでないと動かない
-	?? by れにうむ氏
+	?? by 某凍結氏
 	https://api.twitter.com/1.1/search/universal.json?q=[q]
 	
-	会話API by れにうむ氏
+	会話API by 某凍結氏
 	https://api.twitter.com/1.1/conversation/show/[tweet_id].json
 	
-	メディア系のタイムライン取得 by れにうむ氏
+	メディア系のタイムライン取得 by 某凍結氏
 	https://api.twitter.com/1.1/statuses/media_timeline.json
 	
 	//	UserStreamの非公式引数
 	
 	フォローユーザーの活動状況をリアルタイムに手に入れる。ふぁぼ、あんふぁぼ、ブロック、フォローなどなど。
 	FavStarとか特定ユーザーの監視向け
-	by れにうむ氏
+	by 某凍結氏
 	include_followings_activity : Boolean
