@@ -6,7 +6,7 @@
 		探せばもっと出てくるんじゃなかろうか
 	*/
 	
-	
+	<==============================================================================================>
 	//	cdn.api.twitter.com系は、埋め込みツイートから拾ってきてるので、実質規制無いようなものです。
 	UserID -> ScreenName ( 認証不要 ) by 某凍結氏
 	https://twitter.com/users/[user_id].json
@@ -36,12 +36,13 @@
 	
 	メールアドレスが使えるかどうか(認証不要。RateLimited有り)
 	by フォロワーさん
-	https://api.twitter.com/i/users/email_available.json?mail=[mail_address]
+	https://api.twitter.com/i/users/email_available.json?email=[mail_address]
 	
 	//	こっから認証必要
 	Status Activity ( ふぁぼ、RTの詳細を得られる )
 	https://api.twitter.com/i/statuses/[tweet_id]/activity/summary.json
 	
+	<==============================================================================================>
 	//	公式クライアントで使われてるアクティビティAPI
 	By friends Activity
 	http://api.twitter.com/i/activity/by_friends.json
@@ -54,8 +55,26 @@
 	http://api.twitter.com/users/following_followers_of.json
 	
 	以下、公式クライアントのキーでないと動かない
-	?? by 某凍結氏
+	古いツイート(7日以上前)を探せるAPI by 某凍結氏
 	https://api.twitter.com/1.1/search/universal.json?q=[q]
+	
+	??不明。
+	https://api.twitter.com/1.1/search/typeahead.json
+	
+	おすすめツイ―ト？みたいな。
+	https://api.twitter.com/1.1/discover/universal.json
+	
+	ハイライト？
+	https://api.twitter.com/1.1/discover/highlight.json
+		
+	各ユーザーへのおすすめユーザを取得するAPI
+	https://api.twitter.com/1.1/users/recommendations.json?screen_name=[target_user_screen_name]
+	
+	ツイートを各言語に変換するAPI
+	https://api.twitter.com/1.1/translations/show.json?dest=["en", "jp"..etc]&id=[tweet_id]
+
+	・・・？トレンドっぽい
+	https://api.twitter.com/1.1/trends/personalized.json
 	
 	会話API by 某凍結氏
 	https://api.twitter.com/1.1/conversation/show/[tweet_id].json
@@ -63,6 +82,7 @@
 	メディア系のタイムライン取得 by 某凍結氏
 	https://api.twitter.com/1.1/statuses/media_timeline.json
 	
+	<==============================================================================================>
 	//	UserStreamの非公式引数
 	
 	フォローユーザーの活動状況をリアルタイムに手に入れる。ふぁぼ、あんふぁぼ、ブロック、フォローなどなど。
